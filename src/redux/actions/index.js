@@ -1,5 +1,10 @@
 import { createAction } from 'redux-actions';
 
+//Method to get type of action
+export const getType = (reduxAction) => {
+  return reduxAction().type;
+};
+
 /**For actions we have 3 states
  * - Send request
  * - when successful
@@ -8,7 +13,19 @@ import { createAction } from 'redux-actions';
 
 /**pass an objects for many actions */
 export const getPosts = createAction({
-  getPostRequest: undefined,
+  getPostsRequest: undefined,
   getPostSuccess: (payload) => payload,
   getPostFailure: (err) => err,
 });
+
+/**Each action is a function return object:
+  getType(getPosts.getPostSuccess)
+
+  {
+    type: 'getPostSuccess'
+    payload: {
+      name: 'Test'
+    }
+  }
+
+ */
