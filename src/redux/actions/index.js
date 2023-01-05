@@ -8,7 +8,7 @@ import { createAction } from 'redux-actions';
 
 /**pass an objects for many actions */
 export const getPosts = createAction({
-  getPostsRequest: undefined,
+  getPostRequest: undefined,
   getPostSuccess: (payload) => payload,
   getPostFailure: (err) => err,
 });
