@@ -1,4 +1,4 @@
-import { createAction } from 'redux-actions';
+import { createActions } from 'redux-actions';
 
 //Method to get type of action
 export const getType = (reduxAction) => {
@@ -12,7 +12,7 @@ export const getType = (reduxAction) => {
  */
 
 /**pass an objects for many actions */
-export const getPosts = createAction({
+export const getPosts = createActions({
   getPostsRequest: undefined,
   getPostSuccess: (payload) => payload,
   getPostFailure: (err) => err,
