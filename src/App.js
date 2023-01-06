@@ -1,13 +1,16 @@
 import { useDispatch } from 'react-redux';
+import HomePage from './pages/HomePage';
 
 import * as actions from './redux/actions';
 
 function App() {
-  //Call action, return a function to trigger an action from UI
-  const dispatch = useDispatch();
+  // //Call action, return a function to trigger an action from UI
+  // const dispatch = useDispatch();
 
-  dispatch(actions.getPosts.getPostsRequest());
-  return <p>This is Blog App</p>;
+  // dispatch(actions.getPosts.getPostsRequest());
+
+  // return <p>This is Blog App</p>;
+  return <HomePage />;
 }
 
 export default App;
