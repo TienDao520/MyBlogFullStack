@@ -5,7 +5,7 @@ import PostList from '../components/PostList';
 
 export default function HomePage() {
   return (
-    <Container maxWidth='lg' className={{}}>
+    <Container maxWidth='lg'>
       <Header />
       <PostList />
     </Container>

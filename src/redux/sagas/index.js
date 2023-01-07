@@ -7,7 +7,9 @@ function* fetchPostSaga(action) {
   //if call is async func it will wait until done and asign value to posts by yield
   const posts = yield call(api.fetchPosts);
   console.log('[posts]', posts);
-  yield put(actions.getPosts.getPostSuccess(posts)); //trigger action in saga input is return value from api
+  yield put(actions.getPosts.getPostSuccess(posts.data)); //trigger an action in saga input is return value from api
+  //Block of code in reducer with relevant action will be executed
+  //posts.data so the stored data gonna be an array instead of an object
 }
 
 function* mySaga() {
